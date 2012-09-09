@@ -31,7 +31,7 @@ class R66_FlashData {
   }
   
   public function set($key, $value, $space='default') {
-    R66_Log::write('[' . basename(__FILE__) . ' - line ' . __LINE__ . "] Setting flash data :: $key :: $value :: $space");
+    // R66_Log::write('[' . basename(__FILE__) . ' - line ' . __LINE__ . "] Setting flash data :: $key :: $value :: $space");
     self::init($space);
     self::$_data[$space][$key] = $value;
   }

@@ -33,7 +33,7 @@ class R66_Application extends R66_Model {
       $route->callback = $callback;
       $method = $this->_request_methods[$method];
       $this->_routes[$method][] = $route;
-      R66_Log::write('[' . basename(__FILE__) . ' - line ' . __LINE__ . "] Added route for $method :: $pattern");
+      // R66_Log::write('[' . basename(__FILE__) . ' - line ' . __LINE__ . "] Added route for $method :: $pattern");
     }
     else {
       R66_Log::write('[' . basename(__FILE__) . ' - line ' . __LINE__ . "] Unable to add route to router because the method '$method' is invalid :: Routes array :: " . print_r($this->_routes, true));

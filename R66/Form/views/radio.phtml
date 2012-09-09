@@ -1,0 +1,11 @@
+<div class="control-group question<?php echo $radio->valid ? '' : ' error'; ?>">
+  <label class="control-label"><?php echo $radio->label; ?></label>
+  <div class="controls input choice">
+    <?php foreach($radio->get_options() as $option): ?>
+      <label class="radio <?php echo $radio->inline ? 'inline' : ''; ?>"><input type="radio" id="<?php echo $radio->container; ?>_<?php echo $radio->attribute; ?>_<?php echo $option->value; ?>" name="<?php echo $radio->container; ?>[<?php echo $radio->attribute; ?>]" value="<?php echo $option->value; ?>" <?php echo $option->selected ? 'checked="checked"' : ''; ?>><?php echo $option->text; ?></label>
+    <?php endforeach; ?>
+    <?php if(!empty($radio->description)): ?>
+    <p class="help-block"><?php echo $radio->description; ?></p>
+    <?php endif; ?>
+  </div>
+</div>

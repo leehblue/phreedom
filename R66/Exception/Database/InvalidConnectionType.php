@@ -1,0 +1,2 @@
+<?php
+class R66_Exception_Database_InvalidConnectionType extends R66_Exception_Database {}

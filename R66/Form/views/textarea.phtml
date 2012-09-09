@@ -1,0 +1,9 @@
+<div class="control-group question<?php echo $textarea->valid ? '' : ' error'; ?>">
+  <label for="<?php echo $textarea->container; ?>_<?php echo $textarea->attribute; ?>" class="control-label"><?php echo $textarea->label; ?></label>
+  <div class="controls input">
+    <textarea name="<?php echo $textarea->container; ?>[<?php echo $textarea->attribute; ?>]" id="<?php echo $textarea->container; ?>_<?php echo $textarea->attribute; ?>"><?php echo $textarea->value; ?></textarea>
+    <?php if(!empty($textarea->description)): ?>
+    <p class="help-block"><?php echo $textarea->description; ?></p>
+    <?php endif; ?>
+  </div>
+</div>

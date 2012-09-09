@@ -1,0 +1,13 @@
+<div class="control-group question<?php echo $select->valid ? '' : ' error'; ?>">
+  <label for="<?php echo $select->container; ?>_<?php echo $select->attribute; ?>" class="control-label"><?php echo $select->label; ?></label>
+  <div class="controls input choice">
+    <select name="<?php echo $select->container; ?>[<?php echo $select->attribute; ?>]" id="<?php echo $select->container; ?>_<?php echo $select->attribute; ?>">
+      <?php foreach($select->get_options() as $option): ?>
+      <option value="<?php echo $option->value; ?>" <?php echo $option->selected ? 'selected="selected"' : ''; ?>><?php echo $option->text; ?></option>
+      <?php endforeach; ?>
+    </select>
+    <?php if(!empty($select->description)): ?>
+    <p class="help-block"><?php echo $select->description; ?></p>
+    <?php endif; ?>
+  </div>
+</div>

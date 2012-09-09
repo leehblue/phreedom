@@ -1,0 +1,11 @@
+<div class="control-group question<?php echo $checkbox->valid ? '' : ' error'; ?>">
+  <label class="control-label"><?php echo $checkbox->label; ?></label>
+  <div class="controls input choice">
+    <?php foreach($checkbox->get_options() as $option): ?>
+      <label class="checkbox <?php echo $checkbox->inline ? 'inline' : ''; ?>"><input type="checkbox" id="<?php echo $checkbox->container; ?>_<?php echo $checkbox->attribute; ?>_<?php echo $option->value; ?>" name="<?php echo $checkbox->container; ?>[<?php echo $checkbox->attribute; ?>]" value="<?php echo $option->value; ?>" <?php echo $option->selected ? 'checked="checked"' : ''; ?>><?php echo $option->text; ?></label>
+    <?php endforeach; ?>
+    <?php if(!empty($checkbox->description)): ?>
+    <p class="help-block"><?php echo $checkbox->description; ?></p>
+    <?php endif; ?>
+  </div>
+</div>

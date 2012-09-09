@@ -1,0 +1,9 @@
+<div class="control-group question<?php echo ($text->valid === true) ? '' : ' error'; ?>">
+  <label for="<?php echo $text->container; ?>_<?php echo $text->attribute; ?>" class="control-label"><?php echo $text->label; ?></label>
+  <div class="controls input">
+  <?php echo $text->input_prefix; ?><input type="text" name="<?php echo $text->container; ?>[<?php echo $text->attribute; ?>]" value="<?php echo htmlspecialchars($text->value); ?>" id="<?php echo $text->container; ?>_<?php echo $text->attribute; ?>"><?php echo $text->input_suffix; ?>
+    <?php if(!empty($text->description)): ?>
+    <p class="help-block"><?php echo $text->description; ?></p>
+    <?php endif; ?>
+  </div>
+</div>
